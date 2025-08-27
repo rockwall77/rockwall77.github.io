@@ -10,17 +10,32 @@ body {
 }
 
 .container {
+  position: relative;
   margin: auto;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   line-height: 1.4;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f9f9f9;
+  background: linear-gradient(135deg, #0b0c10, #1f2833), url("../img/tech-grid.svg");
+  background-size: cover, 150px 150px;
+  background-repeat: no-repeat, repeat;
+  overflow: hidden;
   height: 100%;
 }
 
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
 .card {
+  position: relative;
+  z-index: 1;
   background: #fff;
   background-size: contain;
   border-radius: 10px;
