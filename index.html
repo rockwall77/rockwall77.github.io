@@ -2,308 +2,205 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>妖月阁｜唯一发布页｜请务必收藏</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="妖月阁">
-  <meta name="description" content="妖月阁唯一官方发布页，永久入口，海外 / 大陆地址实时更新，请务必收藏。">
-  <meta name="keywords" content="妖月阁,妖月阁发布页,妖月阁官网">
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>妖月阁｜唯一官方发布页</title>
   <style>
-    :root {
-      --bg-color: #050816;
-      --card-bg: rgba(10, 10, 25, 0.92);
-      --accent: #ff3b8d;
-      --accent-soft: rgba(255, 59, 141, 0.12);
-      --accent-2: #37f2ff;
-      --text-main: #f7f7ff;
-      --text-sub: #b0b3c0;
-      --danger: #ffdd35;
-      --btn-radius: 999px;
+    * {
+      box-sizing: border-box;
     }
 
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
-        "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-      background: radial-gradient(circle at top, #1b1640 0%, #050816 55%, #02030a 100%);
-      color: var(--text-main);
-      min-height: 100vh;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      background-color: #f5f5f7;
+      color: #1d1d1f;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
+      min-height: 100vh;
     }
 
-    .container {
-      position: relative;
-      width: 100%;
-      max-width: 960px;
-      padding: 20px;
-      z-index: 1;
-    }
-
-    #particles-js {
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-    }
-
-    .card {
-      position: relative;
-      z-index: 1;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(10, 10, 25, 0.96));
+    .panel {
+      background-color: #ffffff;
+      border: 1px solid #d2d2d7;
       border-radius: 24px;
-      padding: 32px 20px 28px;
-      box-shadow:
-        0 0 0 1px rgba(255, 255, 255, 0.04),
-        0 24px 70px rgba(0, 0, 0, 0.78);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+      padding: 48px;
+      max-width: 640px;
+      width: 100%;
       text-align: center;
-      backdrop-filter: blur(18px);
     }
 
-    .card::before {
-      content: "";
-      position: absolute;
-      inset: -1px;
-      border-radius: inherit;
-      padding: 1px;
-      background: linear-gradient(135deg, rgba(255, 59, 141, 0.75), rgba(55, 242, 255, 0.75));
-      -webkit-mask:
-        linear-gradient(#000 0 0) content-box,
-        linear-gradient(#000 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      opacity: 0.8;
-      pointer-events: none;
-    }
-
-    .brand-logo {
-      width: 120px;
-      height: 120px;
-      border-radius: 26px;
-      object-fit: cover;
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.85);
-      border: 3px solid rgba(255, 255, 255, 0.12);
-      margin-bottom: 12px;
-    }
-
-    .title-main {
-      font-size: 32px;
-      letter-spacing: 0.32em;
-      text-indent: 0.32em;
-      margin: 4px 0 6px;
-      text-transform: uppercase;
-    }
-
-    .title-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 4px 12px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-size: 13px;
-      margin-bottom: 12px;
-    }
-
-    .title-badge span.dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: radial-gradient(circle, #fff 0, var(--accent) 40%, #b3124a 100%);
-      box-shadow: 0 0 12px rgba(255, 59, 141, 0.9);
-    }
-
-    .slogan {
-      font-size: 18px;
-      margin: 6px 0 4px;
+    header {
+      font-size: 16px;
+      letter-spacing: 0.08em;
+      color: #1d1d1f;
+      margin-bottom: 32px;
       font-weight: 600;
-      color: var(--danger);
     }
 
-    .sub-slogan {
-      font-size: 14px;
-      margin: 0 0 18px;
-      color: var(--text-sub);
-    }
-
-    .warning-box {
-      display: inline-flex;
-      flex-direction: column;
-      gap: 4px;
-      padding: 10px 14px;
-      border-radius: 18px;
-      background: rgba(255, 221, 53, 0.06);
-      border: 1px solid rgba(255, 221, 53, 0.55);
-      color: var(--danger);
-      font-size: 13px;
-      text-align: left;
-      max-width: 420px;
-      margin: 0 auto 18px;
-    }
-
-    .warning-title {
+    h1 {
+      font-size: 52px;
       font-weight: 700;
-      font-size: 13px;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin: 0 0 16px;
+      color: #1d1d1f;
     }
 
-    .warning-text {
-      color: #ffe9a6;
+    .subtitle {
+      font-size: 19px;
+      color: #6e6e73;
+      margin: 0 0 48px;
       line-height: 1.4;
     }
 
-    .tip-text {
-      font-size: 13px;
-      color: var(--text-sub);
-      margin-bottom: 18px;
-    }
-
-    .link-group {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-      margin-bottom: 18px;
-    }
-
-    @media (min-width: 640px) {
-      .card {
-        padding: 36px 40px 30px;
-      }
-      .title-main {
-        font-size: 36px;
-      }
-      .slogan {
-        font-size: 20px;
-      }
-      .link-group {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 40px;
     }
 
     .btn {
       display: inline-flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 6px;
-      padding: 11px 14px;
-      border-radius: var(--btn-radius);
-      border: none;
-      cursor: pointer;
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: 0.04em;
+      height: 52px;
+      padding: 0 24px;
+      border-radius: 14px;
       text-decoration: none;
-      transition: all 0.18s ease-out;
-      box-shadow: 0 8px 26px rgba(0, 0, 0, 0.6);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .btn span.pill {
-      font-size: 11px;
       font-weight: 500;
-      opacity: 0.8;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--accent), #ff7ab5);
-      color: #fff;
-    }
-
-    .btn-secondary {
-      background: linear-gradient(135deg, #2751ff, #37f2ff);
-      color: #fff;
-    }
-
-    .btn-outline {
-      background: rgba(13, 17, 40, 0.92);
-      color: var(--accent-2);
-      box-shadow: inset 0 0 0 1px rgba(55, 242, 255, 0.55);
-    }
-
-    .btn::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 0 0, rgba(255, 255, 255, 0.3), transparent 55%);
-      opacity: 0;
-      transition: opacity 0.18s ease-out;
-    }
-
-    .btn:hover::after {
-      opacity: 1;
+      transition: all 180ms ease;
+      cursor: pointer;
+      border: none;
+      gap: 4px;
     }
 
     .btn:hover {
-      transform: translateY(-1px) scale(1.01);
-      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.75);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
     }
 
-    .btn:active {
-      transform: translateY(1px) scale(0.99);
-      box-shadow: 0 7px 20px rgba(0, 0, 0, 0.7);
+    .btn-primary {
+      background-color: #0071e3;
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(0, 113, 227, 0.12);
     }
 
-    .footer-note {
-      font-size: 11px;
-      color: rgba(176, 179, 192, 0.8);
+    .btn-secondary {
+      border: 1px solid #0071e3;
+      color: #0071e3;
+      background-color: transparent;
+    }
+
+    .btn-secondary:hover {
+      background-color: rgba(0, 113, 227, 0.02);
+    }
+
+    .btn-gray {
+      border: 1px solid #d2d2d7;
+      color: #1d1d1f;
+      background-color: transparent;
+    }
+
+    .btn-gray:hover {
+      background-color: rgba(0, 0, 0, 0.02);
+    }
+
+    .btn-name {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .btn-domain {
+      font-size: 12px;
+      opacity: 0.7;
+    }
+
+    .alert {
+      background-color: #ffffff;
+      border: 1px solid #e5e5ea;
+      border-radius: 16px;
+      padding: 20px;
+      text-align: left;
+      margin-bottom: 40px;
+    }
+
+    .alert-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1d1d1f;
+      margin: 0 0 12px;
+    }
+
+    .alert-text {
+      font-size: 14px;
+      color: #6e6e73;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    footer {
+      font-size: 12px;
+      color: #6e6e73;
+      line-height: 1.6;
+      margin-top: 16px;
+    }
+
+    @media (max-width: 480px) {
+      .panel {
+        padding: 28px;
+      }
+
+      h1 {
+        font-size: 38px;
+      }
+
+      .subtitle {
+        font-size: 16px;
+        margin-bottom: 40px;
+      }
+
+      .btn {
+        width: 100%;
+      }
     }
   </style>
 </head>
-
 <body>
-  <div id="particles-js"></div>
+  <div class="panel">
+    <header>妖月阁 · 官方入口</header>
 
-  <div class="container">
-    <div class="card">
-      <img class="brand-logo" src="https://s2.loli.net/2024/09/03/np5Rb24A3FivUah.jpg" alt="妖月阁">
+    <h1>唯一入口</h1>
+    <p class="subtitle">备用网址变更将仅在此发布</p>
 
-      <div class="title-badge">
-        <span class="dot"></span>
-        <span>妖月阁 · 官方唯一入口</span>
-      </div>
+    <div class="button-group">
+      <a href="https://home.yyg.ink" class="btn btn-primary" target="_blank" rel="noopener">
+        <span class="btn-name">官方网站</span>
+        <span class="btn-domain">home.yyg.ink</span>
+      </a>
 
-      <h1 class="title-main">妖 月 阁</h1>
+      <a href="https://www.aiyaoyue.com" class="btn btn-secondary" target="_blank" rel="noopener">
+        <span class="btn-name">大陆入口</span>
+        <span class="btn-domain">www.aiyaoyue.com</span>
+      </a>
 
-      <p class="slogan">请务必按下 CTRL + D 收藏本页</p>
-
-      <div class="warning-box">
-        <div class="warning-title">⚠ 重要提醒</div>
-        <div class="warning-text">
-          发布页永不变，官网域名随时换 —— 走丢了就从这里回家。
-          本页为妖月阁唯一官方发布页，遇到域名无法访问，请先打开这里，再从下方最新链接进入。
-        </div>
-      </div>
-
-      <div class="link-group">
-        <a class="btn btn-primary" href="https://home.yyg.ink" target="_blank" rel="noopener">
-          <span>海外官网入口</span>
-          <span class="pill">home.yyg.ink</span>
-        </a>
-
-        <a class="btn btn-secondary" href="https://www.aiyaoyue.com" target="_blank" rel="noopener">
-          <span>大陆直连入口</span>
-          <span class="pill">www.aiyaoyue.com</span>
-        </a>
-
-        <a class="btn btn-outline" href="https://t.me/yaoyuege" target="_blank" rel="noopener">
-          <span>加入 Telegram 群</span>
-          <span class="pill">获取最新公告</span>
-        </a>
-      </div>
-
-      <p class="tip-text">
-       <strong> 建议使用Chrome / Edge / Firefox浏览器访问体验更佳，更多信息请联络本页面右下角在线客服</strong> 。
-      </p>
-
+      <a href="https://t.me/yaoyuege" class="btn btn-gray" target="_blank" rel="noopener">
+        <span class="btn-name">加入社区</span>
+        <span class="btn-domain">Telegram</span>
+      </a>
     </div>
+
+    <footer>
+      <p>桌面 Ctrl+D / 手机加入书签。<br>如需帮助请使用右下角客服。</p>
+    </footer>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script src="js/particles-config.js"></script>
+  <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="d0d6ca6d-d845-4fbf-b331-ee34c512112b";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </body>
 </html>
-
-<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="d0d6ca6d-d845-4fbf-b331-ee34c512112b";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
